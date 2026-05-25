@@ -70,11 +70,11 @@ export function FeedItem({ video, isActive, isWideScreen, onLiked }: FeedItemPro
           <>
             <div
               className="absolute inset-y-0 left-0 w-px pointer-events-none z-10"
-              style={{ background: "linear-gradient(to bottom, transparent, rgba(124,92,252,0.4), transparent)" }}
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(124,92,252,0.25), transparent)" }}
             />
             <div
               className="absolute inset-y-0 right-0 w-px pointer-events-none z-10"
-              style={{ background: "linear-gradient(to bottom, transparent, rgba(192,92,252,0.4), transparent)" }}
+              style={{ background: "linear-gradient(to bottom, transparent, rgba(192,92,252,0.25), transparent)" }}
             />
           </>
         )}
@@ -122,9 +122,10 @@ export function FeedItem({ video, isActive, isWideScreen, onLiked }: FeedItemPro
             <div
               className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all"
               style={{
-                background: liked ? "rgba(239,68,68,0.2)" : "rgba(255,255,255,0.08)",
-                backdropFilter: "blur(12px)",
-                border: liked ? "1px solid rgba(239,68,68,0.3)" : "1px solid rgba(255,255,255,0.1)",
+                background: liked ? "rgba(239,68,68,0.18)" : "rgba(255,255,255,0.07)",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                border: liked ? "1px solid rgba(239,68,68,0.25)" : "1px solid rgba(255,255,255,0.09)",
               }}
             >
               {liked ? (
@@ -149,9 +150,10 @@ export function FeedItem({ video, isActive, isWideScreen, onLiked }: FeedItemPro
             <div
               className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all"
               style={{
-                background: "rgba(255,255,255,0.08)",
-                backdropFilter: "blur(12px)",
-                border: "1px solid rgba(255,255,255,0.1)",
+                background: "rgba(255,255,255,0.07)",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                border: "1px solid rgba(255,255,255,0.09)",
               }}
             >
               <CommentIcon size={20} className="text-white/80 group-hover:text-white transition-colors" />
@@ -169,9 +171,10 @@ export function FeedItem({ video, isActive, isWideScreen, onLiked }: FeedItemPro
             <div
               className="w-11 h-11 rounded-2xl flex items-center justify-center transition-all"
               style={{
-                background: "rgba(255,255,255,0.08)",
-                backdropFilter: "blur(12px)",
-                border: "1px solid rgba(255,255,255,0.1)",
+                background: "rgba(255,255,255,0.07)",
+                backdropFilter: "blur(10px)",
+                WebkitBackdropFilter: "blur(10px)",
+                border: "1px solid rgba(255,255,255,0.09)",
               }}
             >
               <ShareIcon size={20} className="text-white/80 group-hover:text-white transition-colors" />
@@ -200,7 +203,7 @@ export function FeedItem({ video, isActive, isWideScreen, onLiked }: FeedItemPro
         )}
       </div>
 
-      {/* Wide screen decorative side bars */}
+      {/* Wide screen decorative lines */}
       {isWideScreen && (
         <>
           {/* Left */}
@@ -208,22 +211,14 @@ export function FeedItem({ video, isActive, isWideScreen, onLiked }: FeedItemPro
             className="absolute left-0 top-0 bottom-0 flex items-center justify-center pointer-events-none"
             style={{ width: "calc((100% - min(420px, 56.25vh)) / 2)" }}
           >
-            <div className="flex flex-col items-center gap-3 opacity-25">
-              <div className="w-px h-40 rounded-full" style={{ background: "linear-gradient(to bottom, transparent, #7c5cfc 40%, transparent)" }} />
-              <div className="w-1.5 h-1.5 rounded-full bg-purple-400 opacity-60" />
-              <div className="w-px h-20 rounded-full" style={{ background: "linear-gradient(to bottom, transparent, #7c5cfc60, transparent)" }} />
-            </div>
+            <div className="w-px h-32 rounded-full opacity-15" style={{ background: "linear-gradient(to bottom, transparent, #7c5cfc, transparent)" }} />
           </div>
           {/* Right */}
           <div
             className="absolute right-0 top-0 bottom-0 flex items-center justify-center pointer-events-none"
             style={{ width: "calc((100% - min(420px, 56.25vh)) / 2)" }}
           >
-            <div className="flex flex-col items-center gap-3 opacity-25">
-              <div className="w-px h-40 rounded-full" style={{ background: "linear-gradient(to bottom, transparent, #c05cfc 40%, transparent)" }} />
-              <div className="w-1.5 h-1.5 rounded-full bg-fuchsia-400 opacity-60" />
-              <div className="w-px h-20 rounded-full" style={{ background: "linear-gradient(to bottom, transparent, #c05cfc60, transparent)" }} />
-            </div>
+            <div className="w-px h-32 rounded-full opacity-15" style={{ background: "linear-gradient(to bottom, transparent, #c05cfc, transparent)" }} />
           </div>
         </>
       )}

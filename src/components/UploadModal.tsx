@@ -108,8 +108,8 @@ export function UploadModal({ onClose, onUploaded }: UploadModalProps) {
       <div
         className="w-full max-w-lg max-h-[90dvh] flex flex-col rounded-3xl overflow-hidden animate-scale-in"
         style={{
-          background: "rgba(8,8,20,0.98)",
-          border: "1px solid rgba(255,255,255,0.1)",
+          background: "rgba(10,10,16,0.97)",
+          border: "1px solid rgba(255,255,255,0.08)",
         }}
         onClick={(e) => e.stopPropagation()}
       >

@@ -45,9 +45,9 @@ export function CommentsPanel({ slug, onClose }: CommentsPanelProps) {
     <div
       className="absolute inset-0 z-40 flex flex-col"
       style={{
-        background: "rgba(4,4,10,0.92)",
-        backdropFilter: "blur(32px)",
-        WebkitBackdropFilter: "blur(32px)",
+        background: "rgba(8,8,12,0.96)",
+        backdropFilter: "blur(20px)",
+        WebkitBackdropFilter: "blur(20px)",
       }}
     >
       {/* Header */}

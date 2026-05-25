@@ -37,10 +37,10 @@ export function ShareModal({ slug, title, onClose }: ShareModalProps) {
       <div
         className="w-full rounded-t-3xl p-6 animate-slide-up"
         style={{
-          background: "rgba(8,8,18,0.96)",
-          backdropFilter: "blur(40px)",
-          WebkitBackdropFilter: "blur(40px)",
-          border: "1px solid rgba(255,255,255,0.1)",
+          background: "rgba(12,12,18,0.96)",
+          backdropFilter: "blur(24px)",
+          WebkitBackdropFilter: "blur(24px)",
+          border: "1px solid rgba(255,255,255,0.08)",
           borderBottom: "none",
         }}
         onClick={(e) => e.stopPropagation()}

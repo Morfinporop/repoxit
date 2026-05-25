@@ -203,10 +203,10 @@ export default function App() {
           onClick={() => setShowUpload(true)}
           className="flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-medium text-white transition-all active:scale-95"
           style={{
-            background: "rgba(255,255,255,0.07)",
-            backdropFilter: "blur(20px)",
-            WebkitBackdropFilter: "blur(20px)",
-            border: "1px solid rgba(255,255,255,0.11)",
+            background: "rgba(255,255,255,0.06)",
+            backdropFilter: "blur(12px)",
+            WebkitBackdropFilter: "blur(12px)",
+            border: "1px solid rgba(255,255,255,0.09)",
           }}
         >
           <UploadIcon size={14} strokeWidth={2.2} />
